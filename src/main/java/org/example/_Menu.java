@@ -67,6 +67,16 @@ public class _Menu extends JFrame implements ActionListener {
         JTextField tfSS_ycoordinate  = new JTextField(20);
         lbSS_ycoordinate.setLabelFor(tfSS_ycoordinate );
 
+        lbSS.setBounds(345,120,100,20);
+        lbSS_velocity.setBounds(37,150,100,20);
+        tfSS_velocity.setBounds(90,150,200,20);
+        lbSS_acceleration.setBounds(295,150,100,20);
+        tfSS_acceleration.setBounds(375,150,200,20);
+        lbSS_xcoordinate.setBounds(10,180,100,20);
+        tfSS_xcoordinate.setBounds(90,180,200,20);
+        lbSS_ycoordinate.setBounds(295,180,100,20);
+        tfSS_ycoordinate.setBounds(375,180,200,20);
+
         frame.add(lbSS);
         frame.add(lbSS_velocity);
         frame.add(tfSS_velocity);
@@ -83,8 +93,12 @@ public class _Menu extends JFrame implements ActionListener {
         String listeners[]= {"static", "dynamic"};
         comboBox = new JComboBox(listeners);
         comboBox.addActionListener(this);
-        panel.add(lblistener);
-        panel.add(comboBox);
+
+        comboBox.setBounds(345,240,100,20);
+        lblistener.setBounds(330,210,200,20);
+
+        frame.add(lblistener);
+        frame.add(comboBox);
 
         button.addActionListener(new ActionListener()
         {
