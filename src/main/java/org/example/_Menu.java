@@ -8,18 +8,27 @@ import javax.swing.*;
 public class _Menu extends JFrame implements ActionListener {
     //JFrame mainframe;
     JComboBox comboBox;
+    int x_coordinate;
+    int y_coordinate;
+    double frequency;
+    double velocity;
+    double acceleration;
+    Coordinates coordinates;
+    Wave wave;
+    Listener listener;
+    MovingListener movingListener;
+    SoundSource soundSource;
     public _Menu()
     {
-
         JPanel panel = new JPanel();
         panel.setLayout(new FlowLayout());
-        JFrame frame = new JFrame("ProjectDopplerEffect");
+        JFrame frame = new JFrame("ProjectDopplerEffect_menu");
         frame.setSize(800, 600);
 
+        //button
         JButton button = new JButton("START");
-        button.setBounds(300,0,200,100);
-        //button.addActionListener((ActionListener) this);
-        panel.add(button);
+        button.setBounds(340,0,100,50);
+        frame.add(button);
 
         //wave
         JLabel lbwave  = new JLabel("Wave:");
@@ -30,41 +39,43 @@ public class _Menu extends JFrame implements ActionListener {
         JTextField tfwave_velocity = new JTextField(20);
         lbwave_velocity.setLabelFor(tfwave_velocity);
 
-        panel.add(Box.createRigidArea(new Dimension(800, 0)));
-        panel.add(lbwave);
-        panel.add(Box.createRigidArea(new Dimension(800, 0)));
-        panel.add(lbwave_frequency);
-        panel.add(tfwave_frequency);
-        panel.add(lbwave_velocity);
-        panel.add(tfwave_velocity);
+        lbwave.setBounds(370,60,100,20);
+        lbwave_frequency.setBounds(22,90,100,20);
+        tfwave_frequency.setBounds(90,90,200,20);
+        lbwave_velocity.setBounds(323,90,100,20);
+        tfwave_velocity.setBounds(375,90,200,20);
+
+
+        frame.add(lbwave);
+        frame.add(lbwave_frequency);
+        frame.add(tfwave_frequency);
+        frame.add(lbwave_velocity);
+        frame.add(tfwave_velocity);
 
         //Soudnd Source
         JLabel lbSS  = new JLabel("Soudnd Source:");
         JLabel lbSS_velocity = new JLabel("velocity:");
         JTextField tfSS_velocity = new JTextField(20);
         lbSS_velocity.setLabelFor(tfSS_velocity);
-        JLabel lbSS_acceleration  = new JLabel("acceleration :");
+        JLabel lbSS_acceleration  = new JLabel("acceleration:");
         JTextField tfSS_acceleration  = new JTextField(20);
         lbSS_acceleration .setLabelFor(tfSS_acceleration );
-        JLabel lbSS_xcoordinate = new JLabel("x coordinate :");
+        JLabel lbSS_xcoordinate = new JLabel("x coordinate:");
         JTextField tfSS_xcoordinate  = new JTextField(20);
         lbSS_xcoordinate.setLabelFor(tfSS_xcoordinate );
-        JLabel lbSS_ycoordinate = new JLabel("y coordinate :");
+        JLabel lbSS_ycoordinate = new JLabel("y coordinate:");
         JTextField tfSS_ycoordinate  = new JTextField(20);
         lbSS_ycoordinate.setLabelFor(tfSS_ycoordinate );
 
-        panel.add(Box.createRigidArea(new Dimension(12000,0 )));
-        panel.add(lbSS);
-        panel.add(Box.createRigidArea(new Dimension(800, 0)));
-        panel.add(lbSS_velocity);
-        panel.add(tfSS_velocity);
-        panel.add(lbSS_acceleration);
-        panel.add(tfSS_acceleration);
-        panel.add(Box.createRigidArea(new Dimension(110, 0)));
-        panel.add(lbSS_xcoordinate);
-        panel.add(tfSS_xcoordinate);
-        panel.add(lbSS_ycoordinate);
-        panel.add(tfSS_ycoordinate);
+        frame.add(lbSS);
+        frame.add(lbSS_velocity);
+        frame.add(tfSS_velocity);
+        frame.add(lbSS_acceleration);
+        frame.add(tfSS_acceleration);
+        frame.add(lbSS_xcoordinate);
+        frame.add(tfSS_xcoordinate);
+        frame.add(lbSS_ycoordinate);
+        frame.add(tfSS_ycoordinate);
 
         //Listener
         panel.add(Box.createRigidArea(new Dimension(300, 0)));
@@ -75,10 +86,31 @@ public class _Menu extends JFrame implements ActionListener {
         panel.add(lblistener);
         panel.add(comboBox);
 
+        button.addActionListener(new ActionListener()
+        {
+            public void actionPerformed(ActionEvent a)
+            {
+
+                try {
+                    wave.frequency = Integer.parseInt(tfwave_frequency.getText());
+                    wave.velocity = Integer.parseInt(tfwave_velocity.getText());
+
+                    soundSource.velocity = Double.parseDouble(tfSS_velocity.getText());
+                    soundSource.acceleration = Double.parseDouble(tfSS_acceleration.getText());
+                    soundSource.coordinates.x_coordinate = Integer.parseInt(tfSS_xcoordinate.getText());
+                    soundSource.coordinates.y_coordinate = Integer.parseInt(tfSS_ycoordinate.getText());
+                    frame.dispose();
+                    Simulation projektDopplerEffect = new Simulation();
+
+                } catch (NumberFormatException ignore)
+                {
+                    NewKanwa newKanwa = new NewKanwa();
+                }
+            }
+        });
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         frame.getContentPane().add(panel, BorderLayout.CENTER);
         frame.setVisible(true);
-
     }
     @Override
     public void actionPerformed(ActionEvent e)
@@ -93,8 +125,6 @@ public class _Menu extends JFrame implements ActionListener {
             {
                 NewDynamicListener newListener = new NewDynamicListener();
             }
-
-            //TODO spawn nowe okno z danym sluchaczem
         }
     }
 }

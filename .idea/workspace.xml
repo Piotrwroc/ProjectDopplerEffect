@@ -4,17 +4,19 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="483cf3d9-9173-4ace-9c00-b8a3b6931e6b" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/NewDynamicListener.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/NewStaticListener.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/_Menu.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
+    <list default="true" id="483cf3d9-9173-4ace-9c00-b8a3b6931e6b" name="Changes" comment="Update">
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/NewKanwa.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/Simulation.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/example/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/Space.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/Space.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/NewDynamicListener.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/NewDynamicListener.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/NewStaticListener.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/NewStaticListener.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/SoundSource.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/SoundSource.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/_Menu.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/_Menu.java" afterDir="false" />
     </list>
-    <list id="082a10a6-458c-45ba-a941-9d76d472e674" name="Changes by Mateusz" comment="" />
+    <list id="4ef26c21-2788-429a-802e-2781e4076c3b" name="Changes by Mateusz" comment="">
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/_Menu.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/_Menu.java" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -24,6 +26,23 @@
     <projectState path="$PROJECT_DIR$">
       <ProjectState />
     </projectState>
+  </component>
+  <component name="ExternalProjectsManager">
+    <system id="GRADLE">
+      <state>
+        <projects_view>
+          <tree_state>
+            <expand>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="ProjectDopplerEffect" type="f1a62948:ProjectNode" />
+              </path>
+            </expand>
+            <select />
+          </tree_state>
+        </projects_view>
+      </state>
+    </system>
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -48,6 +67,27 @@
       </UrlAndAccount>
     </option>
   </component>
+  <component name="LineStatusTrackerManager">
+    <file path="$PROJECT_DIR$/src/main/java/org/example/_Menu.java">
+      <ranges>
+        <range start1="10" end1="10" start2="10" end2="20" changelist="483cf3d9-9173-4ace-9c00-b8a3b6931e6b" />
+        <range start1="12" end1="13" start2="22" end2="22" changelist="483cf3d9-9173-4ace-9c00-b8a3b6931e6b" />
+        <range start1="15" end1="16" start2="24" end2="25" changelist="483cf3d9-9173-4ace-9c00-b8a3b6931e6b" />
+        <range start1="18" end1="18" start2="27" end2="28" changelist="483cf3d9-9173-4ace-9c00-b8a3b6931e6b" />
+        <range start1="19" end1="22" start2="29" end2="31" changelist="483cf3d9-9173-4ace-9c00-b8a3b6931e6b" />
+        <range start1="32" end1="39" start2="41" end2="53" changelist="483cf3d9-9173-4ace-9c00-b8a3b6931e6b" />
+        <range start1="45" end1="46" start2="59" end2="60" changelist="483cf3d9-9173-4ace-9c00-b8a3b6931e6b" />
+        <range start1="48" end1="49" start2="62" end2="63" changelist="483cf3d9-9173-4ace-9c00-b8a3b6931e6b" />
+        <range start1="51" end1="52" start2="65" end2="66" changelist="483cf3d9-9173-4ace-9c00-b8a3b6931e6b" />
+        <range start1="54" end1="54" start2="68" end2="78" changelist="4ef26c21-2788-429a-802e-2781e4076c3b" />
+        <range start1="55" end1="67" start2="79" end2="88" changelist="483cf3d9-9173-4ace-9c00-b8a3b6931e6b" />
+        <range start1="74" end1="76" start2="95" end2="101" changelist="4ef26c21-2788-429a-802e-2781e4076c3b" />
+        <range start1="77" end1="77" start2="102" end2="124" changelist="483cf3d9-9173-4ace-9c00-b8a3b6931e6b" />
+        <range start1="80" end1="81" start2="127" end2="127" changelist="483cf3d9-9173-4ace-9c00-b8a3b6931e6b" />
+        <range start1="95" end1="97" start2="141" end2="141" changelist="483cf3d9-9173-4ace-9c00-b8a3b6931e6b" />
+      </ranges>
+    </file>
+  </component>
   <component name="ProjectId" id="2QZexBKUDTqo3OuF2ha0Cb5V3Kk" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
@@ -61,7 +101,7 @@
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "WebServerToolWindowFactoryState": "false",
     "codeWithMe.voiceChat.enabledByDefault": "false",
-    "last_opened_file_path": "C:/Users/Piotr/Desktop/Nowy folder (2)/ABM_SymulacjaPotworkow-main",
+    "last_opened_file_path": "C:/Java/ProjectDopplerEffect",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -69,6 +109,7 @@
     "project.structure.last.edited": "Modules",
     "project.structure.proportion": "0.0",
     "project.structure.side.proportion": "0.0",
+    "settings.editor.selected.configurable": "preferences.lookFeel",
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
@@ -87,8 +128,19 @@
       <updated>1685565776774</updated>
       <workItem from="1685565777799" duration="11398000" />
       <workItem from="1685577310246" duration="607000" />
-      <workItem from="1686518986738" duration="14638000" />
+      <workItem from="1686518986738" duration="14879000" />
+      <workItem from="1686597936266" duration="57000" />
+      <workItem from="1686601560968" duration="6000" />
+      <workItem from="1686601576361" duration="12037000" />
     </task>
+    <task id="LOCAL-00001" summary="Update">
+      <created>1686534097745</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1686534097745</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -104,5 +156,19 @@
         </entry>
       </map>
     </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Update" />
+    <option name="LAST_COMMIT_MESSAGE" value="Update" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <breakpoint enabled="true" type="java-exception">
+          <properties class="java.lang.NumberFormatException" package="java.lang" />
+          <option name="timeStamp" value="1" />
+        </breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>
