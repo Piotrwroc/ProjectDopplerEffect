@@ -65,7 +65,7 @@ public class Space {
     }
     Space()
     {
-        this.x_coordinate=2000;
+        this.x_coordinate=2000; //TODO test
         this.y_coordinate=1000;
     }
     public void Creation()
