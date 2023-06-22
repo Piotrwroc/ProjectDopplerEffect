@@ -1,7 +1,7 @@
 package org.example;
-public class MovingListener extends Listener{
+public class DynamicListener extends Listener{
     double velocity;
-    MovingListener(double velocity)
+    DynamicListener(double velocity)
     {
         this.velocity=velocity;
     }

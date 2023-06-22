@@ -1,18 +1,19 @@
 package org.example;
 
 import javax.swing.*;
-import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.util.ArrayList;
 
-public class NewDynamicListener extends Menu { //TODO test czy potrzebne
+public class NewDynamicListener {
     double velocity;
-    Listener listener;
-    MovingListener movingListener;
-    Coordinates coordinates;
-    int x_coordinate;
-    int y_coordinate;
+    //Listener listener;
+    DynamicListener dynamicListener;
     NewDynamicListener()
+    {
+
+    }
+    public void createListener(ArrayList ListenerList)
     {
         JFrame frame = new JFrame("Dynamic Listener");
         frame.setSize(400, 300);
@@ -59,16 +60,17 @@ public class NewDynamicListener extends Menu { //TODO test czy potrzebne
         {
             public void actionPerformed(ActionEvent c)
             {
-                MovingListener movinglistener1 = new MovingListener(velocity);
+                dynamicListener = new DynamicListener(velocity);
                 try {
-                    movinglistener1.coordinates.x_coordinate = Integer.parseInt(tfDynamicL_xcoordinate.getText());
-                    movinglistener1.coordinates.y_coordinate = Integer.parseInt(tfDynamicL_ycoordinate.getText());
-                    movinglistener1.velocity = Double.parseDouble(tfDynamicL_velocity.getText());
+                    dynamicListener.coordinates.x_coordinate = Integer.parseInt(tfDynamicL_xcoordinate.getText());
+                    dynamicListener.coordinates.y_coordinate = Integer.parseInt(tfDynamicL_ycoordinate.getText());
+                    dynamicListener.velocity = Double.parseDouble(tfDynamicL_velocity.getText());
                     frame.dispose();
                 } catch (NumberFormatException ignore)
                 {
                     NewKanwa newKanwa = new NewKanwa();
                 }
+                ListenerList.add(dynamicListener);
             }
         });
         frame.setVisible(true);

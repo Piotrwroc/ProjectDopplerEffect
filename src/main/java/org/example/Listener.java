@@ -5,11 +5,9 @@ public class Listener {
     Listener(Coordinates coordinates)
     {
     this.coordinates=coordinates;
-    this.is_hearing=false;
     }
     Listener()
     {
         this.coordinates=new Coordinates(0,0);
-        this.is_hearing=false;
     }
 }

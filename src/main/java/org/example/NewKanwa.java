@@ -12,7 +12,7 @@ public class NewKanwa {
         frame.setSize(300, 200);
         //frame.setLayout(null);
         frame.setResizable(false);
-        JButton button = new JButton("Przepraszam najmocniej");
+        JButton button = new JButton("I am sorry");
         button.setBounds(0,100,300,50);
 
         JLabel lberror  = new JLabel("Wrong data");

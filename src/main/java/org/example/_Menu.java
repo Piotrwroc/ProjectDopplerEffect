@@ -2,22 +2,19 @@ package org.example;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
-import java.util.*;
 import javax.swing.*;
+import java.util.ArrayList;
 
 public class _Menu extends JFrame implements ActionListener {
     //JFrame mainframe;
+    ArrayList<Listener> listenerList;
+    ArrayList<DynamicListener> dynamicListenerList;
     JComboBox comboBox;
     int x_coordinate;
     int y_coordinate;
     double frequency;
     double velocity;
     double acceleration;
-    Coordinates coordinates;
-    Wave wave;
-    Listener listener;
-    MovingListener movingListener;
-    SoundSource soundSource;
     public _Menu()
     {
         JPanel panel = new JPanel();
@@ -88,6 +85,8 @@ public class _Menu extends JFrame implements ActionListener {
         frame.add(tfSS_ycoordinate);
 
         //Listener
+        listenerList = new ArrayList<>();
+        dynamicListenerList = new ArrayList<>();
         panel.add(Box.createRigidArea(new Dimension(300, 0)));
         JLabel lblistener  = new JLabel("Choose type of listener:");
         String listeners[]= {"static", "dynamic"};
@@ -104,24 +103,53 @@ public class _Menu extends JFrame implements ActionListener {
         {
             public void actionPerformed(ActionEvent a)
             {
-
                 try {
-                    wave.frequency = Integer.parseInt(tfwave_frequency.getText());
-                    wave.velocity = Integer.parseInt(tfwave_velocity.getText());
+                    Wave wave = new Wave(frequency, velocity);
+                    SoundSource soundSource = new SoundSource(velocity,acceleration,new Coordinates(x_coordinate,y_coordinate));
+                    wave.frequency = Double.parseDouble(tfwave_frequency.getText());
+                    wave.velocity = Double.parseDouble(tfwave_velocity.getText());
 
                     soundSource.velocity = Double.parseDouble(tfSS_velocity.getText());
                     soundSource.acceleration = Double.parseDouble(tfSS_acceleration.getText());
                     soundSource.coordinates.x_coordinate = Integer.parseInt(tfSS_xcoordinate.getText());
                     soundSource.coordinates.y_coordinate = Integer.parseInt(tfSS_ycoordinate.getText());
                     frame.dispose();
-                    Simulation projektDopplerEffect = new Simulation();
-
+                    _Simulation symulacja = new _Simulation();
+                    symulacja.create_Simulation(dynamicListenerList, listenerList, wave, soundSource);
                 } catch (NumberFormatException ignore)
                 {
                     NewKanwa newKanwa = new NewKanwa();
                 }
             }
         });
+
+        //Debug List
+        JButton DebugList = new JButton("Debug list");
+        DebugList.setBounds(200,300,100,50);
+        frame.add(DebugList);
+        DebugList.addActionListener(new ActionListener()
+        {
+            public void actionPerformed(ActionEvent c)
+            {
+                for (Listener value : listenerList) {
+                    System.out.println(value.coordinates.x_coordinate + " " + value.coordinates.y_coordinate);
+                }
+            }
+        });
+        //Debug MovingList
+        JButton DebugMovingList = new JButton("Debug Movinglist");
+        DebugMovingList.setBounds(300,300,100,50);
+        frame.add(DebugMovingList);
+        DebugMovingList.addActionListener(new ActionListener()
+        {
+            public void actionPerformed(ActionEvent c)
+            {
+                for (DynamicListener value : dynamicListenerList) {
+                    System.out.println(value.coordinates.x_coordinate + " " + value.coordinates.y_coordinate + " " + value.velocity);
+                }
+            }
+        });
+
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         frame.getContentPane().add(panel, BorderLayout.CENTER);
         frame.setVisible(true);
@@ -134,10 +162,12 @@ public class _Menu extends JFrame implements ActionListener {
             if (comboBox.getSelectedItem()=="static")
             {
                 NewStaticListener newListener = new NewStaticListener();
+                newListener.createListener(listenerList);
             }
             if (comboBox.getSelectedItem()=="dynamic")
             {
                 NewDynamicListener newListener = new NewDynamicListener();
+                newListener.createListener(dynamicListenerList);
             }
         }
     }

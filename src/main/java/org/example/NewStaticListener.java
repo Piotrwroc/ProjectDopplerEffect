@@ -4,13 +4,16 @@ import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.util.ArrayList;
 
-public class NewStaticListener extends Menu { //TODO test czy potrzebne
+public class NewStaticListener {
     Listener listener;
-    Coordinates coordinates;
     int x_coordinate;
     int y_coordinate;
     NewStaticListener()
+    {
+    }
+    public void createListener(ArrayList ListenerList)
     {
         JFrame frame = new JFrame("Static Listener");
         frame.setSize(400, 300);
@@ -48,15 +51,16 @@ public class NewStaticListener extends Menu { //TODO test czy potrzebne
         {
             public void actionPerformed(ActionEvent b)
             {
-                Listener listener1 = new Listener(new Coordinates(x_coordinate, y_coordinate));
+                listener = new Listener(new Coordinates(x_coordinate, y_coordinate));
                 try {
-                    listener1.coordinates.x_coordinate = Integer.parseInt(tfStaticL_xcoordinate.getText());
-                    listener1.coordinates.y_coordinate = Integer.parseInt(tfStaticL_ycoordinate.getText());
+                    listener.coordinates.x_coordinate = Integer.parseInt(tfStaticL_xcoordinate.getText());
+                    listener.coordinates.y_coordinate = Integer.parseInt(tfStaticL_ycoordinate.getText());
                     frame.dispose();
                 } catch (NumberFormatException ignore)
                 {
                     NewKanwa newKanwa = new NewKanwa();
                 }
+                ListenerList.add(listener);
             }
         });
         frame.setVisible(true);

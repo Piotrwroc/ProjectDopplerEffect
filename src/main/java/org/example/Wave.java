@@ -19,3 +19,4 @@ double velocity;
         this.velocity=velocity;
     }
 }
+
