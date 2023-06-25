@@ -6,36 +6,110 @@ import java.awt.event.ActionListener;
 import java.util.ArrayList;
 import java.util.List;
 
+/**
+ * Class responsible for the painting drawings
+ */
 public class _Simulation_Panel extends JPanel {
-    int local_SS_X = 0;
-    int local_SS_Y = 0;
-    int local_L_X = 0;
-    int local_L_Y = 0;
-    int local_DL_X=0;
-    int local_DL_Y=0;
-    int local_diameter = 0;
-    int local_diameter_listener = 0;
-    double local_wave_velocity = 0;
-    double local_listener_velocity=0;
-    int waveRadius=0;
-    int sizeDynamic=0;
-    int sizeStatic=0;
-    ArrayList<Point> localPoint = new ArrayList<>();
-    ArrayList<DynamicListener> localDynamicListener = new ArrayList<>();
-    ArrayList<Listener> localListener = new ArrayList<>();
-    ArrayList<Coordinates> local_DL = new ArrayList<>();
-    ArrayList<Coordinates> local_L = new ArrayList<>();
-    ArrayList<Point> points = new ArrayList<>();
+    /**
+     * Class attribute local_SS_X, temporary Sound Source x coordinate
+     */
+    private int local_SS_X = 0;
+    /**
+     * Class attribute local_SS_Y, temporary Sound Source y coordinate
+     */
+    private int local_SS_Y = 0;
+    /**
+     * Class attribute local_L_X, temporary Listener x coordinate
+     */
+    private int local_L_X = 0;
+    /**
+     * Class attribute local_L_Y, temporary Listener y coordinate
+     */
+    private int local_L_Y = 0;
+    /**
+     * Class attribute local_DL_X, temporary Dynamic Listener x coordinate
+     */
+    private int local_DL_X=0;
+    /**
+     * Class attribute local_DL_Y, temporary Dynamic Listener y coordinate
+     */
+    private int local_DL_Y=0;
+    /**
+     * Class attribute local_diameter, temporary diameter of Sound Source
+     */
+    private int local_diameter = 0;
+    /**
+     * Class attribute local_diameter_listener, temporary diameter of listener
+     */
+    private int local_diameter_listener = 0;
+    /**
+     * Class attribute local_wave_velocity, temporary velocity of wave
+     */
+    private double local_wave_velocity = 0;
+    /**
+     * Class attribute waveRadius
+     */
+    private int waveRadius=0;
+    /**
+     * Class attribute sizeDynamic
+     */
+    private int sizeDynamic=0;
+    /**
+     * Class attribute sizeStatic
+     */
+    private int sizeStatic=0;
+    /**
+     * List of wave points.
+     */
+    private ArrayList<Point> localPoint = new ArrayList<>();
+    /**
+     * List of dynamic listeners.
+     */
+    private ArrayList<DynamicListener> localDynamicListener = new ArrayList<>();
+    /**
+     * List of static listeners.
+     */
+    private ArrayList<Listener> localListener = new ArrayList<>();
+    /**
+     * List of dynamic listeners.
+     */
+    private ArrayList<Coordinates> local_DL = new ArrayList<>();
+    /**
+     * List of static listeners.
+     */
+    private ArrayList<Coordinates> local_L = new ArrayList<>();
+    /**
+     * List of wave points.
+     */
+    private ArrayList<Point> points = new ArrayList<>();
+
+    /**
+     * Instantiates a new Simulation panel.
+     */
     _Simulation_Panel() {
     }
 
-    public void pretimer(SoundSource soundSource, Wave wave, int diameter, int diameter_listener, ArrayList<Point> wavePoints, ArrayList<DynamicListener> dynamicListener, ArrayList<Listener> listener)
+    /**
+     * Pretimer methode responsible for assign temporary values, make timer action and start timer
+     *
+     * @param soundSource       the sound source
+     * @param wave              the wave
+     * @param diameter          the diameter
+     * @param diameter_listener the diameter listener
+     * @param wavePoints        the wave points
+     * @param dynamicListener   the dynamic listener
+     * @param listener          the listener
+     */
+    protected void pretimer(SoundSource soundSource, Wave wave, int diameter, int diameter_listener, ArrayList<Point> wavePoints, ArrayList<DynamicListener> dynamicListener, ArrayList<Listener> listener)
     {
-        double time = (1 / wave.frequency) * 1000;
+        double time = (10/ wave.frequency);
 
-        Timer timer = new Timer(100, new ActionListener() {
+        //Creating a timer
+        Timer timer = new Timer((int) time, new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
+
+                //Assigning temporary values
                 local_SS_X = soundSource.coordinates.x_coordinate;
                 local_SS_Y = soundSource.coordinates.y_coordinate;
                 local_wave_velocity = wave.velocity;
@@ -69,33 +143,36 @@ public class _Simulation_Panel extends JPanel {
                     points.add(point);
                 }
 
-                //prePaint(soundSource, wave, diameter, diameter_listener,  wavePoints,  dynamicListener,  listener);
+                //updating sound source velocity and coordinates
                 soundSource.velocity += soundSource.velocity * soundSource.acceleration;
                 soundSource.coordinates.x_coordinate += soundSource.velocity;
 
+                //updating dynamic listener velocity
                 for (int i=0; i<dynamicListener.size(); i++)
                 {
                     dynamicListener.get(i).coordinates.x_coordinate += dynamicListener.get(i).velocity;
                 }
                 repaint();
-                //if (soundSource.coordinates.x_coordinate + diameter > getWidth()) //repeat function
-                //{
-                //    soundSource.coordinates.x_coordinate = 0;
-                //    wavePoints.clear();
-                //}
+                //condition for reset coordinates
+                if (soundSource.coordinates.x_coordinate + diameter > getWidth())
+                {
+                    soundSource.coordinates.x_coordinate = 0;
+                    wavePoints.clear();
+                }
 
             }
         });
         timer.start();
     }
 
+    //method responsible for painting sound source, wave, listeners and dynamic listeners
     @Override
     protected void paintComponent(Graphics circles)
     {
-
         super.paintComponent(circles);
         Graphics2D circles2d = (Graphics2D) circles;
-        //circles2d.setRenderingHint(RenderingHints.KEY_ANTIALIASING, RenderingHints.VALUE_ANTIALIAS_ON); // too high requirements
+        //ANTIALIASING
+        circles2d.setRenderingHint(RenderingHints.KEY_ANTIALIASING, RenderingHints.VALUE_ANTIALIAS_ON);
         circles2d.setColor(Color.BLACK);
         circles2d.fillOval(local_SS_X, local_SS_Y, local_diameter, local_diameter);
         circles.setColor(Color.BLUE);

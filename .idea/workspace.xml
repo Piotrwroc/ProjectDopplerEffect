@@ -4,21 +4,61 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="483cf3d9-9173-4ace-9c00-b8a3b6931e6b" name="Changes" comment="Update V2">
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/_Simulation.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/_Simulation_Panel.java" afterDir="false" />
+    <list default="true" id="483cf3d9-9173-4ace-9c00-b8a3b6931e6b" name="Changes" comment="Update V3">
+      <change afterPath="$PROJECT_DIR$/element-list" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/index-files/index-1.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/index-files/index-10.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/index-files/index-11.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/index-files/index-12.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/index-files/index-13.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/index-files/index-14.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/index-files/index-15.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/index-files/index-16.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/index-files/index-2.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/index-files/index-3.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/index-files/index-4.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/index-files/index-5.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/index-files/index-6.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/index-files/index-7.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/index-files/index-8.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/index-files/index-9.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/legal/COPYRIGHT" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/legal/LICENSE" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/legal/jquery.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/legal/jqueryUI.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/org/example/Coordinates.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/org/example/DynamicListener.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/org/example/Listener.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/org/example/Main.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/org/example/NewDynamicListener.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/org/example/NewKanwa.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/org/example/NewStaticListener.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/org/example/SoundSource.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/org/example/Wave.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/org/example/_Menu.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/org/example/_Simulation.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/org/example/_Simulation_Panel.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/org/example/package-summary.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/org/example/package-tree.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pregenerated.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/glass.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/x.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/script-dir/jquery-3.6.0.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/script-dir/jquery-ui.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/script-dir/jquery-ui.min.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/Coordinates.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/Coordinates.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/DynamicListener.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/DynamicListener.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/example/Listener.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/Listener.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/example/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/MovingListener.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/DynamicListener.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/example/NewDynamicListener.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/NewDynamicListener.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/example/NewKanwa.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/NewKanwa.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/example/NewStaticListener.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/NewStaticListener.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/Simulation.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/example/SoundSource.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/SoundSource.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/Space.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/example/Wave.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/Wave.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/example/_Menu.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/_Menu.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/_Simulation.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/_Simulation.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/_Simulation_Panel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/_Simulation_Panel.java" afterDir="false" />
     </list>
     <list id="a77b45b3-dc6d-4172-981e-821359a63dae" name="Changes by Mateusz" comment="" />
     <option name="SHOW_DIALOG" value="false" />
@@ -75,20 +115,23 @@
     <setting file="jar://$PROJECT_DIR$/../../Program Files/Java/jdk-19/lib/src.zip!/java.desktop/javax/swing/JComponent.java" root0="SKIP_INSPECTION" />
   </component>
   <component name="ProjectId" id="2QZexBKUDTqo3OuF2ha0Cb5V3Kk" />
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
+    "ASKED_ADD_EXTERNAL_FILES": "true",
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "WebServerToolWindowFactoryState": "false",
     "codeWithMe.voiceChat.enabledByDefault": "false",
     "ignore.virus.scanning.warn.message": "true",
-    "last_opened_file_path": "C:/Users/Piotr/Desktop/ProjectDopplerEffect",
+    "last_opened_file_path": "C:/Java/ProjectDopplerEffect",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -127,6 +170,10 @@
       <workItem from="1687393987612" duration="666000" />
       <workItem from="1687394723950" duration="720000" />
       <workItem from="1687405270824" duration="163000" />
+      <workItem from="1687405581722" duration="521000" />
+      <workItem from="1687715125148" duration="416000" />
+      <workItem from="1687715553130" duration="32000" />
+      <workItem from="1687732825548" duration="301000" />
     </task>
     <task id="LOCAL-00001" summary="Update">
       <created>1686534097745</created>
@@ -149,7 +196,14 @@
       <option name="project" value="LOCAL" />
       <updated>1686613985622</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="Update V3">
+      <created>1687405695224</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1687405695224</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -167,10 +221,12 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <MESSAGE value="Update" />
-    <MESSAGE value="Update V2" />
     <MESSAGE value="Update V2.1" />
-    <option name="LAST_COMMIT_MESSAGE" value="Update V2.1" />
+    <MESSAGE value="Update V2" />
+    <MESSAGE value="Update V3" />
+    <option name="LAST_COMMIT_MESSAGE" value="Update V3" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

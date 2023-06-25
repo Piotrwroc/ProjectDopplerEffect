@@ -1,11 +1,27 @@
 package org.example;
+
+/**
+ * Class responsible for static listener
+ */
 public class Listener {
-    Coordinates coordinates;
-    boolean is_hearing;
+    /**
+     * listener coordinates
+     */
+    protected Coordinates coordinates;
+
+    /**
+     * Instantiates a new Listener
+     *
+     * @param coordinates the coordinates
+     */
     Listener(Coordinates coordinates)
     {
-    this.coordinates=coordinates;
+        this.coordinates=coordinates;
     }
+
+    /**
+     * Instantiates a new Listener
+     */
     Listener()
     {
         this.coordinates=new Coordinates(0,0);

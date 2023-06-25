@@ -1,30 +1,54 @@
 package org.example;
-
 import javax.swing.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.util.ArrayList;
 
+/**
+ * Class responsible for creating JFrame where user specifies the dynamic listener parameters
+ */
 public class NewDynamicListener {
-    double velocity;
-    //Listener listener;
-    DynamicListener dynamicListener;
+    /**
+     * Class attribute velocity
+     */
+    private double velocity;
+    /**
+     * Class attribute dynamicListener
+     */
+    private DynamicListener dynamicListener;
+
+    /**
+     * Instantiates a new New dynamic listener
+     */
     NewDynamicListener()
     {
-
     }
-    public void createListener(ArrayList ListenerList)
+
+    /**
+     * Methode creating dynamic listener
+     *
+     * @param ListenerList the listener list
+     */
+    protected void createListener(ArrayList ListenerList)
     {
+        /*
+         * Creating a JFrame
+         */
         JFrame frame = new JFrame("Dynamic Listener");
         frame.setSize(400, 300);
         //frame.setLayout(null);
         frame.setVisible(true);
 
-
+        /*
+         * Creating a JButton
+         */
         JButton button = new JButton("OK");
         button.setBounds(150,0,100,50);
         frame.add(button);
 
+        /*
+         * Creating JLabels and JTextFields
+         */
         JLabel lbDynamicL = new JLabel("Dynamic Listener:");
         JLabel lbDynamicL_xcoordinate = new JLabel("x coordinate :");
         JTextField tfDynamicL_xcoordinate  = new JTextField(20);
@@ -37,6 +61,9 @@ public class NewDynamicListener {
         lbDynamicL_velocity.setLabelFor(tfDynamicL_velocity);
         JTextField tfno2 = new JTextField(20);
 
+        /*
+         * Setting fields coordinates
+         */
         lbDynamicL.setBounds(10,50,120,50);
         lbDynamicL_xcoordinate.setBounds(10,100,120,20);
         tfDynamicL_xcoordinate.setBounds(100,100,120,20);
@@ -47,6 +74,9 @@ public class NewDynamicListener {
         lbDynamicL_velocity.setBounds(10,200,120,20);
         tfDynamicL_velocity.setBounds(100,200,120,20);
 
+        /*
+         * Adding fields to frame
+         */
         frame.add(lbDynamicL);
         frame.add(lbDynamicL_xcoordinate);
         frame.add(tfDynamicL_xcoordinate);
@@ -56,10 +86,16 @@ public class NewDynamicListener {
         frame.add(tfDynamicL_velocity);
         frame.add(tfno2);
 
+        /*
+         * Button action listener
+         */
         button.addActionListener(new ActionListener()
         {
             public void actionPerformed(ActionEvent c)
             {
+                /*
+                 * Creating dynamicListener object and passing values from text field to object
+                 */
                 dynamicListener = new DynamicListener(velocity);
                 try {
                     dynamicListener.coordinates.x_coordinate = Integer.parseInt(tfDynamicL_xcoordinate.getText());
@@ -68,6 +104,9 @@ public class NewDynamicListener {
                     frame.dispose();
                 } catch (NumberFormatException ignore)
                 {
+                    /*
+                     * Creating newKanwa object
+                     */
                     NewKanwa newKanwa = new NewKanwa();
                 }
                 ListenerList.add(dynamicListener);
